@@ -22,7 +22,7 @@
 
                 // Add event listener to the anime menu item
                 $(".menu__item[data-action='anime']").on("click", function() {
-                    window.location.href = 'http://77.91.84.6:9118/';
+                    window.location.assign('http://77.91.84.6:9118/');
                 });
 
             }, 10); 
