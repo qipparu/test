@@ -22,7 +22,15 @@
 
                 // Add event listener to the anime menu item
                 $(".menu__item[data-action='anime']").on("click", function() {
-                    window.location.assign('http://77.91.84.6:9118/');
+                    window.location.href = 'http://77.91.84.6:9118/';
+                });
+
+                // For Apple TV, we also listen for the "keydown" event on the menu item
+                $(".menu__item[data-action='anime']").on("keydown", function(event) {
+                    // If "Enter" key is pressed, navigate to the URL
+                    if (event.keyCode === 13) {
+                        window.location.href = 'http://77.91.84.6:9118/';
+                    }
                 });
 
             }, 10); 
